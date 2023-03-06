@@ -1,0 +1,125 @@
+.container1 h1 {
+  display: flex;
+  justify-content: center;
+  margin: 50 auto;
+  font-weight: bolder;
+}
+
+
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 15 0 0 70;
+  margin-top: 20px;
+}
+
+.testimonials h2{
+    margin-left: 530;
+    margin-top: 80px;
+
+}
+
+#testicard {
+  width: 380px;
+  padding: 20px;
+  margin: 15 15;
+  border: 4 solid;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.pict {
+  width: 100%;
+  height: 180px;
+}
+
+/* .texting{
+ 
+} */
+.quotes {
+  margin: 15 auto;
+}
+
+.authors {
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.authors i{
+    color: rgb(255, 230, 0);
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 !important;
+  }
+}
+.stars {
+  margin: 20 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.stars button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin: 0 20;
+  padding: 10px;
+  width: 80px;
+}
+
+.stars button:hover {
+  background-color: rgb(252, 122, 108);
+  color: white;
+  transition: ease-in-out 0.8s;
+}
+.stars .on {
+  background-color: rgb(252, 122, 108);
+  color: white;
+}
+
+button i {
+  color: rgb(255, 230, 0);
+  font-size: 20px;
+  margin: 0 0 0 10;
+}
+@media only screen and (max-width: 600px){
+    .stars {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .stars button{
+        margin:10 35;
+    }
+}

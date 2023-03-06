@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title>My Project</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="left-logo">
+            <a href="https://instagram.com/tfauzyy"><img src="./assets/images/logD.png" alt="logo" /></a>
+        </div>
+        <ul>
+            <li> <a href="https://instagram.com/tfauzyy"><img src="./assets/images/logD.png" alt="logo" /></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="home" href="myproject.html">My Project</a></li>
+            <li><a href="testi.html">Testimonials</a></li>
+        </ul>
+        <div class="contact">
+            <a href="contactme.html" class="contactMe">Contact Me</a>
+        </div>
+        <div class="right-burg">
+            <button onclick="buttonbar()">
+                <i id="openbutt" class="fa-solid fa-bars"></i>
+                <i id="closebutt" class="fa-solid fa-rectangle-xmark"></i>
+            </button>
+
+        </div>
+    </nav>
+    <div class="float-bar" id="floatbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="on"><a href="myproject.html">My Project</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
+            <li><a href="testi.html">Testimonials</a></li>
+        </ul>
+    </div>
+    <!-- navBar-end -->
+
+    <div class="form">
+        <h1>ADD MY PROJECT</h1>
+        <form onsubmit="getData(event)" id="form">
+            <div class="contentform">
+                <div class="input">
+                    <label for="title">Project Name</label>
+                    <input id="title" type="text" maxlength="26">
+                </div>
+                <div class="date">
+                    <div class="input">
+                        <label for="start">Start Date</label>
+                        <input id="start" type="date">
+                    </div>
+                    <div class="input">
+                        <label for="end">End Date</label>
+                        <input id="end" type="date">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <label for="description">Description</label>
+                    <textarea id="description" maxlength="113"></textarea>
+                </div>
+                <div class="input">
+                    <label>Technologies</label>
+                    <div class="technologies">
+                        <div class="left">
+                            <div class="check">
+                                <input id="java" class="checkbox" type="checkbox">
+                                <label>Java</label>
+                            </div>
+                            <div class="check">
+                                <input id="javascript" class="checkbox" type="checkbox">
+                                <label>Javascript</label>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="check">
+                                <input id="react" class="checkbox" type="checkbox">
+                                <label>React Js</label>
+                            </div>
+                            <div class="check">
+                                <input id="node" class="checkbox" type="checkbox">
+                                <label>Node Js</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input" style="margin-bottom: 50px;">
+                    <label for="upload">Upload Image</label>
+                    <div class="image">
+                        <input id="image" type="file">
+                        <label for="image"><i class="fa-solid fa-paperclip"></i>
+                            <div class="choose"> &nbsp;choose</div>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="submit">
+                    <button>submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- PROJECT -->
+    <div class="project">
+
+        <div class="projectblog">
+            <h1>MY PROJECT</h1>
+            <div class="miniblog" id="content">
+
+                <!-- DIYNAMIC-CONTENTS -->
+
+                <div class="card-content">
+                    <div class="contentblog">
+                        <img class="blog-img" src="./assets/images/blog.png" alt="blog-image">
+                        <div class="content-text">
+                            <a href="project-detail.html">"Pasar Coding di Indonesia dinilai..."</a>
+                            <h6>28 November 2022 02:30 WIB || Author : Teguh Fauzi</h6>
+                            <h5>Duration : 3 month(s).</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas impedit provident quia
+                                voluptatum sit adipisci, modi voluptatem. Minima, quide.</p>
+
+                            <h5>3 week ago(s).</h5>
+                            <div class="icon">
+                                <i class="fa-brands fa-java"></i>
+                                <i class="fa-brands fa-js"></i>
+                                <i class="fa-brands fa-react"></i>
+                                <i class="fa-brands fa-node"></i>
+                            </div>
+                            <div class="button">
+                                <div class="edit">
+                                    <button>edit</button>
+                                </div>
+                                <div class="del">
+                                    <button>delete</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./assets/js/myproject.js"></script>
+</body>
+
+
+</html>
