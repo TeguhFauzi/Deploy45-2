@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: poppins">
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg shadow">
+      <div class="container-fluid mx-lg-5 mx-3">
+        <a class="navbar-brand" href="https://instagram.com/tfauzyy"
+          ><img src="/public/images/logD.png" alt="" style="width: 45px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse my-lg-0 my-3"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item d-flex justify-content-center">
+              <a
+                class="nav-link active fw-bold mx-5"
+                aria-current="page"
+                href="/user"
+                >Home</a
+              >
+            </li>
+            {{if .FlashStatus}}
+            <li class="nav-item d-flex justify-content-center">
+              <a class="nav-link" href="/form-project">Add Project</a>
+            </li>
+            {{else}}
+            <div></div>
+            {{end}}
+          </ul>
+          <div class="d-flex justify-content-center">
+            {{if .FlashStatus}}
+            <a
+              href="/form-register"
+              class="btn"
+              style="color: rgb(5, 5, 17); font-size: 15px"
+              >Hello, {{.FlashName}}</a
+            >
+            <a
+              href="/logout"
+              class="btn"
+              style="color: rgb(5, 5, 17); font-size: 15px; margin: 0 50px"
+              >Logout</a
+            >
+            {{else}}
+            <div></div>
+            {{end}}
+            <a
+              href="/contact"
+              class="btn"
+              style="
+                color: white;
+                background-color: rgb(5, 5, 17);
+                font-size: 15px;
+              "
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    {{if .FlashMessage}} {{if .FlashStatus}}
+    <div class="alert alert-success" role="alert">{{.FlashMessage}}</div>
+    {{else}}
+    <div></div>
+    {{end}} {{end}}
+    <!-- Nav-end -->
+
+    <div
+      class="col-sm-12 col-lg-12 h-100 container-fluid d-flex justify-content-center align-items-center align-middle p-lg-5 p-sm-0 bg-body-tertiary"
+    >
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 45px;
+        "
+      >
+        <div
+          class="col-lg-10 col-sm-12 d-lg-flex d-sm-block justify-content-center align-items-sm-center align-items-lg-center bg-white shadow pt-3"
+        >
+          <div class="col-lg-8 col-sm-12 p-4">
+            <h2>Hi Welcome to my hut</h2>
+            <h6 class="fw-bold">"I ain't here to say too much"</h6>
+            <p class="m-0 m-lg-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto tempora, nulla aliquam tempore libero sunt rerum
+              nostrum repellat officiis provident cupiditate deserunt
+              laboriosam, quod quam sed laborum quas alias et!
+            </p>
+            <div
+              class="my-lg-5 my-0 d-sm-flex justify-content-sm-center justify-content-lg-start d-lg-flex"
+            >
+              <a
+                class="text-decoration-none bg-dark text-white px-4 rounded-pill d-flex align-items-center justify-content-center my-4 my-lg-0"
+                href="https://wa.me/685280840143"
+                >contact</a
+              >
+              <a
+                class="text-decoration-none mx-4 text-black d-flex justify-content-center align-items-center mb-5 my-lg-0"
+                href=""
+                >downoadCV<i class="fa-solid fa-file-arrow-down mx-1"></i
+              ></a>
+            </div>
+            <div
+              class="d-flex justify-content-between justify-content-lg-start d-lg-flex"
+            >
+              <a style="color: #0077b5; margin: 0 17px" href="#"
+                ><i class="fa-brands fa-linkedin-in fs-1"></i
+              ></a>
+              <a
+                style="color: #fc2146; margin: 0 17px"
+                href="https://instagram.com/tfauzyy"
+                ><i class="fa-brands fa-instagram fs-1"></i
+              ></a>
+              <a style="color: #4267b2; margin: 0 17px" href="#"
+                ><i class="fa-brands fa-square-facebook fs-1"></i
+              ></a>
+              <a style="color: #1da1f2; margin: 0 17px" href="#"
+                ><i class="fa-brands fa-square-twitter fs-1"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 p-4 d-flex justify-content-center">
+            <div class="shadow col-sm-6 col-lg-12 rounded-2">
+              <img
+                src="/public/images/images.jpg"
+                class="w-100 rounded-top-2"
+                alt=""
+              />
+              <p class="d-flex justify-content-center fw-bold m-0">
+                Teguh Fauzi
+              </p>
+              <p class="d-flex justify-content-center">Fullstack Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================= -->
+    <div class="" style="width: 100%">
+      <div class="container-fluid">
+        <h1 class="d-flex justify-content-center my-4 my-lg-5 w-bold">
+          My Project
+        </h1>
+        <div class="grid row p-lg-5 p-1">
+          {{range $index, $data := .Blogs}}
+          <div
+            class="col-lg-3 my-lg-2 my-3 col-sm-12 d-flex justify-content-center"
+          >
+            <div
+              class="card p-2"
+              style="
+                width: 18rem;
+                border: none;
+                box-shadow: 0 0 0 2px rgb(255, 255, 255),
+                  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+              "
+            >
+              <img
+                src="/upload/{{$data.Image}}"
+                class="card"
+                alt="..."
+                style="width: 100%; height: 200px; border: none"
+              />
+              <div class="card-body">
+
+                  <a
+                    class="text-decoration-none text-black fs-6 fw-bold d-flex justify-content-center"
+                    href="/blog-detail/{{$data.ID}}"
+                    >{{$data.Title}}
+                  </a>
+                  <p
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      font-size: 13px;
+                      font-weight: bolder;
+                      margin-top: 7px;
+                      margin-bottom: 2px;
+                    "
+                  >
+                    Duration : {{$data.Duration}}
+                  </p>
+                  <p
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      font-size: 13px;
+                      font-weight: bolder;
+                    "
+                  >
+                    {{$data.PostDate}} | {{$data.Author}}
+                  </p>
+                  <div style="height: 100px;">
+                    <p class="card-text">{{$data.Description}}</p>
+                  </div>
+        
+
+               
+                  <div class="row my-4">
+                    <div class="icon">
+                      {{range $index, $data := $data.Techno}}
+                      <img src="/public/images/{{$data}}.png" />
+                      {{end}}
+                    </div>
+                  </div>
+          
+                    <div
+                      class="col-lg-12 col-12 d-flex justify-content-between"
+                    >
+                      <a
+                        href="/edit-project/{{$data.ID}}"
+                        class="btn btn-dark"
+                        style="width: 115px"
+                        >Edit</a
+                      >
+                      <a
+                        href="/delete-project/{{$data.ID}}"
+                        class="btn btn-dark"
+                        style="width: 115px"
+                        >Delete</a
+                      >
+                    </div>
+            
+             
+              </div>
+            </div>
+          </div>
+          {{end}}
+
+          <!-- /*================================================*/ -->
+
+          {{range $index, $data := .Dummy}}
+          <div
+            class="col-lg-3 my-lg-2 my-3 col-sm-12 d-flex justify-content-center"
+          >
+            <div
+              class="card p-2"
+              style="
+                width: 18rem;
+                border: none;
+                box-shadow: 0 0 0 2px rgb(255, 255, 255),
+                  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+              "
+            >
+              <img
+                src="/public/images/{{$data.Image}}.jpg"
+                class="card"
+                alt="..."
+                style="width: 100%; height: 200px; border: none"
+              />
+              <div class="card-body">
+                <a
+                  class="text-decoration-none text-black fs-6 fw-bold d-flex justify-content-center"
+                  href="/blog-Detail/{{$index}}"
+                  >{{$data.Title}}</a
+                >
+                <p
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    font-size: 13px;
+                    font-weight: bolder;
+                    margin-top: 7px;
+                    margin-bottom: 2px;
+                  "
+                >
+                  Duration : {{$data.Duration}}
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    font-size: 13px;
+                    font-weight: bolder;
+                  "
+                >
+                  {{$data.PostDate}} | {{$data.Author}}
+                </p>
+                <div style="height: 100px;">
+                  <p class="card-text">{{$data.Description}}</p>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12">{{$data.Icon}}</div>
+                </div>
+                <div class="col-lg-12 col-12 d-flex justify-content-between">
+                  <a href="#" class="btn btn-dark" style="width: 115px">Edit</a>
+                  <a
+                    href="/delete-blog/{{$index}}"
+                    class="btn btn-dark"
+                    style="width: 115px"
+                    >Delete</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
